@@ -2,15 +2,41 @@ var button1 = document.getElementById('box1')
 var button2 = document.getElementById('box2')
 var button3 = document.getElementById('box3')
 
-button1.onmouseover="colorChange()"
+button1.onmousenter="colorChange()"
+button1.onclick="window.alert()"
+button2.onclick="window.alert()"
+button3.onclick="window.alert()"
 
 function colorChange () {
-    document.getElementById('box1').style.backgroundColor = 'blue';
+    button1.style.backgroundColor = 'blue';
+    button2.style.backgroundColor = 'blue';
+    button3.style.backgroundColor = 'blue'
 }
 
-button1.addEventListener('mouseover', function () {
-    colorChange) }
+function colorChange1 () {
+    button1.style.backgroundColor = 'orange';
+    button2.style.backgroundColor = 'white';
+    button3.style.backgroundColor = 'purple'
+}
 
-button2.addEventListener('mouseover', colorChange)
-button3.addEventListener('mouseover', colorChange)
+function select1 () {
+    alert ('Oooh - so close, but no cigar');
+}
 
+function select2 () {
+    alert ('DING DING DING We Have a Winner');
+}
+
+function select3 () {
+    alert ('Oops, butter luck next time');
+}
+
+button1.addEventListener('mouseenter', colorChange);
+button2.addEventListener('mouseenter', colorChange);
+button3.addEventListener('mouseenter', colorChange);
+button1.addEventListener('mouseleave', colorChange1);
+button2.addEventListener('mouseleave', colorChange1);
+button3.addEventListener('mouseleave', colorChange1);
+button1.addEventListener('click', select1);
+button2.addEventListener('click', select2);
+button3.addEventListener('click', select3);
