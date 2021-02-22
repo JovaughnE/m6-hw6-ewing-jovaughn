@@ -21,14 +21,17 @@ function colorChange1 () {
 
 function select1 () {
     alert ('Oooh - so close, but no cigar');
+    this.children[i].classList.toggle('show');
 }
 
 function select2 () {
     alert ('DING DING DING We Have a Winner');
+    this.children[i].classList.toggle('show');
 }
 
 function select3 () {
     alert ('Oops, butter luck next time');
+    this.children[i].classList.toggle('show');
 }
 
 button1.addEventListener('mouseenter', colorChange);
@@ -40,3 +43,9 @@ button3.addEventListener('mouseleave', colorChange1);
 button1.addEventListener('click', select1);
 button2.addEventListener('click', select2);
 button3.addEventListener('click', select3);
+
+function startOver() {
+    this.children[i].classList.toggle('start-button');
+    }
+
+start-button[i].addEventListener('click', startOver);
